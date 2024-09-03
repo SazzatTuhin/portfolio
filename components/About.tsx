@@ -6,23 +6,20 @@ const About = () => {
     <div id="#about" className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <Image
-          src=""
-          alt=""
+          src="/me.png"
+          alt="me"
           width={1280}
           height={1920}
           className="max-w-full sm:max-w-sm rounded-lg shadow-2xl"
         />
         <div>
-          <h1 className="text-5xl font-bold">About Me</h1>
-          <p className="py-3">
+          <h1 className="text-5xl font-bold pb-10">About Me</h1>
+          <p className="pb-3">
             I am Sazzat Hossain, a dedicated and ambitious web developer with a
             strong passion for creating innovative and user-centric web
             applications. My expertise spans a broad range of modern web
             technologies, including Next.js, React.js, Redux.js, JavaScript,
             TypeScript, Prisma, Mongoose, Express.js, MongoDB, and Tailwind CSS.
-            I recently completed a full-stack project, 'Travel Nest' a hotel
-            booking application that showcases my ability to integrate complex
-            features with a focus on security, usability, and performance.
           </p>
           <p className="pb-3">
             As a developer, I thrive on solving complex problems and building
