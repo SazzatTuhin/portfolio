@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Sectiontitle from "./SectionTitle";
 
 const About = () => {
   return (
@@ -13,7 +14,7 @@ const About = () => {
           className="max-w-full sm:max-w-sm rounded-lg shadow-2xl"
         />
         <div>
-          <h1 className="text-5xl font-bold pb-10">About Me</h1>
+          <Sectiontitle title="About Me" />
           <p className="pb-3">
             I am Sazzat Hossain, a dedicated and ambitious web developer with a
             strong passion for creating innovative and user-centric web

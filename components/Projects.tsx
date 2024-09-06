@@ -1,14 +1,15 @@
 import { projects } from "@/data/projects";
 import Image from "next/image";
 import Link from "next/link";
+import Sectiontitle from "./SectionTitle";
 
 const Projects = () => {
   return (
-    <div id="#projects" className="container max-w-7xl mx-auto px-[16px] py-20">
-      <h1 className="text-5xl font-bold pb-10">Projects</h1>
+    <div id="#projects" className="wrapper">
+      <Sectiontitle title="Projects" />
       <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-10">
         {projects.map((project) => (
-          <div key={project.id} className="card bg-base-100 w-96 shadow-xl">
+          <div key={project.id} className="card bg-base-100 w-full  shadow-xl">
             <figure className="h-60">
               <Image
                 src={project.image}
