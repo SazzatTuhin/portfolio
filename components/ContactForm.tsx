@@ -2,13 +2,9 @@
 
 import { useState } from "react";
 import { z } from "zod";
-
-type TFromData = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  message: string;
-};
+import axios from "axios";
+import toast from "react-hot-toast";
+import { Loader2 } from "lucide-react";
 
 const formDataSchema = z.object({
   firstName: z.string().min(3).max(20),
@@ -20,22 +16,30 @@ const formDataSchema = z.object({
 type TFormData = z.infer<typeof formDataSchema>;
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState<TFromData>({
+  const [formData, setFormData] = useState<TFormData>({
     firstName: "",
     lastName: "",
     email: "",
     message: "",
   });
-
   const [errorData, setErrorData] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const handleSubmit = (e: React.SyntheticEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
 
     try {
+      setIsLoading(true);
+
       formDataSchema.parse(formData);
 
-      // To-DO
+      const res = await axios.post("/api/contact", formData);
+
+      if (res) {
+        toast.success(res.data);
+      } else {
+        toast.error("Failed to send message");
+      }
 
       setFormData({
         firstName: "",
@@ -49,19 +53,19 @@ const ContactForm = () => {
       if (error instanceof z.ZodError) {
         setErrorData(error.issues);
       }
+    } finally {
+      setIsLoading(false);
     }
   };
 
   const checkErrors = (path: string) => {
-    {
-      return errorData
-        .filter((err) => err.path[0] === path)
-        .map((err) => (
-          <p key={path} className="text-rose-500">
-            {err.message}
-          </p>
-        ));
-    }
+    return errorData
+      .filter((err) => err.path[0] === path)
+      .map((err) => (
+        <p key={path} className="text-rose-500">
+          {err.message}
+        </p>
+      ));
   };
 
   return (
@@ -69,7 +73,7 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
       className="grid grid-cols-1 md:grid-cols-2 gap-5"
     >
-      {/* Form Control */}
+      {/* FORM CONTROL */}
       <div className="flex flex-col gap-2">
         <label htmlFor="firstName" className="cursor-pointer">
           First Name
@@ -82,14 +86,14 @@ const ContactForm = () => {
           type="text"
           id="firstName"
           name="firstName"
-          placeholder="Enter Your First Name"
+          placeholder="Enter your first name"
           className="border p-2 rounded-lg"
         />
         {checkErrors("firstName")}
       </div>
-      {/* Form Control */}
+      {/* FORM CONTROL */}
       <div className="flex flex-col gap-2">
-        <label htmlFor="firstName" className="cursor-pointer">
+        <label htmlFor="lastName" className="cursor-pointer">
           Last Name
         </label>
         <input
@@ -98,14 +102,14 @@ const ContactForm = () => {
             setFormData({ ...formData, lastName: e.target.value })
           }
           type="text"
-          id="lasttName"
+          id="lastName"
           name="lastName"
-          placeholder="Enter Your Last Name"
-          className="border p-2 rounded-border"
+          placeholder="Enter your last name"
+          className="border p-2 rounded-lg"
         />
         {checkErrors("lastName")}
       </div>
-      {/* Form Control */}
+      {/* FORM CONTROL */}
       <div className="flex flex-col gap-2 md:col-span-2">
         <label htmlFor="email" className="cursor-pointer">
           Email Address
@@ -116,12 +120,12 @@ const ContactForm = () => {
           type="text"
           id="email"
           name="email"
-          placeholder="Enter email address"
-          className="border p-2 rounded-border"
+          placeholder="Enter your email address"
+          className="border p-2 rounded-lg"
         />
         {checkErrors("email")}
       </div>
-      {/* Form Control */}
+      {/* FORM CONTROL */}
       <div className="flex flex-col gap-2 md:col-span-2">
         <label htmlFor="message" className="cursor-pointer">
           Message
@@ -134,13 +138,13 @@ const ContactForm = () => {
           rows={7}
           id="message"
           name="message"
-          placeholder="write your message"
-          className="border p-2 rounded-border resize-none"
+          placeholder="Write your message"
+          className="border p-2 rounded-lg resize-none"
         />
         {checkErrors("message")}
       </div>
-      <button type="submit" className="btn btn-primary">
-        Submit
+      <button type="submit" disabled={isLoading} className="btn btn-primary">
+        {isLoading ? <Loader2 className="animate-spin" /> : "Submit"}
       </button>
     </form>
   );

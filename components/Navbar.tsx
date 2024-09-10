@@ -1,29 +1,30 @@
 import Link from "next/link";
 import { RESUME_DRIVE_LINK } from "@/constants/resume";
 
+export const navLinks = (
+  <>
+    <li>
+      <Link href="#hero">Home</Link>
+    </li>
+    <li>
+      <Link href="/#about">About</Link>
+    </li>
+    <li>
+      <Link href="/#projects">Projects</Link>
+    </li>
+    <li>
+      <Link href="/#skills">Skills</Link>
+    </li>
+    <li>
+      <Link href="/#blogs">Blogs</Link>
+    </li>
+    <li>
+      <Link href="/#contact">Contact</Link>
+    </li>
+  </>
+);
+
 const Navbar = () => {
-  const navLinks = (
-    <>
-      <li>
-        <Link href="#hero">Home</Link>
-      </li>
-      <li>
-        <Link href="/#about">About</Link>
-      </li>
-      <li>
-        <Link href="/#projects">Projects</Link>
-      </li>
-      <li>
-        <Link href="/#skills">Skills</Link>
-      </li>
-      <li>
-        <Link href="/#blogs">Blogs</Link>
-      </li>
-      <li>
-        <Link href="/#contact">Contact</Link>
-      </li>
-    </>
-  );
   return (
     <div className="navbar bg-base-100 sticky top-0 z-50">
       <div className="navbar-start">
