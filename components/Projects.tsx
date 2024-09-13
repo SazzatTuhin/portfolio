@@ -5,17 +5,21 @@ import Sectiontitle from "./SectionTitle";
 
 const Projects = () => {
   return (
-    <div id="#projects" className="wrapper">
+    <div id="projects" className="wrapper">
       <Sectiontitle title="Projects" />
       <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-10">
         {projects.map((project) => (
-          <div key={project.id} className="card bg-base-100 w-full  shadow-xl">
+          <div
+            data-aos="fade-up"
+            key={project.id}
+            className="card card-compact bg-base-100 w-full shadow-xl"
+          >
             <figure className="h-60">
               <Image
                 src={project.image}
                 alt={project.title}
-                width={1920}
-                height={1080}
+                width={1280}
+                height={720}
                 className="w-full h-full object-cover"
               />
             </figure>
