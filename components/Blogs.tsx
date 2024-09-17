@@ -7,7 +7,7 @@ const Blogs = () => {
   return (
     <div id="blogs" className="wrapper">
       <Sectiontitle title="Blogs" />
-      <div className="gird grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-10">
         {blogs.map((blog) => (
           <div
             data-aos="fade-up"
@@ -25,7 +25,7 @@ const Blogs = () => {
             </figure>
             <div className="card-body">
               <h2 className="card-title">{blog.title}</h2>
-              <div className="flex justify-between items-center gap-5 font-semibold">
+              <div className="flex justify-between items-center gap-5 ">
                 <p className="badge badge-outline">{blog.author}</p>
                 <p className="text-primary">{blog.publishedAt}</p>
               </div>

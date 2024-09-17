@@ -10,13 +10,19 @@ const Footer = () => {
       </nav>
       <nav>
         <div className="grid grid-flow-col gap-4">
-          <Link href="" target="_blank">
+          <Link href="https://github.com/SazzatTuhin" target="_blank">
             <FaGithub size={24} />
           </Link>
-          <Link href="" target="_blank">
+          <Link
+            href="https://www.linkedin.com/in/sazzat-tuhin-7ba102142/"
+            target="_blank"
+          >
             <FaLinkedin size={24} />
           </Link>
-          <Link href="" target="_blank">
+          <Link
+            href="https://www.facebook.com/sazzathossain.tuhin"
+            target="_blank"
+          >
             <FaFacebook size={24} />
           </Link>
         </div>

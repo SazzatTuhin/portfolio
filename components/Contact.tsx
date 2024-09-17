@@ -10,8 +10,8 @@ const Contact = () => {
         {/* {left} */}
         <div className="flex flex-col gap-2">
           <p className="text-xl md:text-2xl ">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim,
-            autem?
+            For any queries or project discussions, feel free to reach out to
+            me.
           </p>
           <p>
             <b>Phone:</b> <Link href="tel:+8801880249593">+8801880249593</Link>{" "}

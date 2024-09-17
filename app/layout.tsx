@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="light">
+    <html lang="en" data-theme="light" className="overflow-x-hidden">
       <body className={spaceGrotesk.className}>
         <Toaster position="top-center" reverseOrder={false} />
         <Navbar />
