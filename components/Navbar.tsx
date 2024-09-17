@@ -4,7 +4,7 @@ import { RESUME_DRIVE_LINK } from "@/constants/resume";
 export const navLinks = (
   <>
     <li>
-      <Link href="#hero">Home</Link>
+      <Link href="/#hero">Home</Link>
     </li>
     <li>
       <Link href="/#about">About</Link>
