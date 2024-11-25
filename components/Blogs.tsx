@@ -27,6 +27,7 @@ const Blogs = () => {
               <h2 className="card-title">{blog.title}</h2>
               <div className="flex justify-between items-center gap-5 ">
                 <p className="badge badge-outline">
+                  {blog.author}
                   <Link
                     href="https://www.linkedin.com/in/m-m-sazzat-hossain-7ba102142/"
                     target="_blank"
@@ -51,7 +52,7 @@ const Blogs = () => {
       </div>
       <div className="flex justify-center mt-10">
         <Link
-          href="https://www.linkedin.com/in/m-m-sazzat-hossain-7ba102142/"
+          href="https://www.linkedin.com/in/m-m-sazzat-hossain-7ba102142/recent-activity/all/"
           target="_blank"
           className="btn btn-outline"
         >
