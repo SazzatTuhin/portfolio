@@ -26,7 +26,11 @@ const Contact = () => {
             <b>Address:</b> Uttara, Dhaka-1230, Dhaka Division, Bangladesh
           </p>
           <div className="flex flex-wrap gap-2">
-            <Link href="https://github.com/SazzatTuhin" target="_blank">
+            <Link
+              href="https://github.com/SazzatTuhin"
+              target="_blank"
+              className="underline underline-offset-2 hover:no-underline"
+            >
               GitHub
             </Link>
 
