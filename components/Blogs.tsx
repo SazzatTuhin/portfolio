@@ -26,7 +26,13 @@ const Blogs = () => {
             <div className="card-body">
               <h2 className="card-title">{blog.title}</h2>
               <div className="flex justify-between items-center gap-5 ">
-                <p className="badge badge-outline">{blog.author}</p>
+                <p className="badge badge-outline">
+                  <Link
+                    href="https://www.linkedin.com/in/m-m-sazzat-hossain-7ba102142/"
+                    target="_blank"
+                    className="underline underline-offset-2 hover:no-underline"
+                  ></Link>
+                </p>
                 <p className="text-primary">{blog.publishedAt}</p>
               </div>
               <p>{blog.body.substring(0, 200)}...</p>
@@ -45,7 +51,7 @@ const Blogs = () => {
       </div>
       <div className="flex justify-center mt-10">
         <Link
-          href="https://github.com/SazzatTuhin"
+          href="https://www.linkedin.com/in/m-m-sazzat-hossain-7ba102142/"
           target="_blank"
           className="btn btn-outline"
         >

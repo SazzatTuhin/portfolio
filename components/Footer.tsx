@@ -14,7 +14,7 @@ const Footer = () => {
             <FaGithub size={24} />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/sazzat-tuhin-7ba102142/"
+            href="https://www.linkedin.com/in/m-m-sazzat-hossain-7ba102142/"
             target="_blank"
           >
             <FaLinkedin size={24} />
