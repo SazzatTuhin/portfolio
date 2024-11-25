@@ -26,53 +26,60 @@ const Contact = () => {
             <b>Address:</b> Uttara, Dhaka-1230, Dhaka Division, Bangladesh
           </p>
           <div className="flex flex-wrap gap-2">
-            <Link href="/" target="_blank">
+            <Link href="https://github.com/SazzatTuhin" target="_blank">
               GitHub
             </Link>
+
             <Link
-              href="/"
+              href="https://www.linkedin.com/in/m-m-sazzat-hossain-7ba102142/"
               target="_blank"
               className="underline underline-offset-2 hover:no-underline"
             >
               Linkedin
             </Link>
+
             <Link
-              href="/"
+              href="https://leetcode.com/u/sazzat_tuhin/"
               target="_blank"
               className="underline underline-offset-2 hover:no-underline"
             >
               Leetcode
             </Link>
+
             <Link
-              href="/"
+              href="https://www.hackerrank.com/profile/sazzattuhin"
               target="_blank"
               className="underline underline-offset-2 hover:no-underline"
             >
               HackerRank
             </Link>
+
             <Link
-              href="/"
+              href="https://www.freecodecamp.org/sazzat_tuhin"
               target="_blank"
               className="underline underline-offset-2 hover:no-underline"
             >
               FreeCodeCamp
             </Link>
+
             <Link
-              href="/"
+              href="https://stackoverflow.com/users/27411945/m-m-sazzat-hossain"
               target="_blank"
               className="underline underline-offset-2 hover:no-underline"
             >
               Stack overflow
             </Link>
+
             <Link
-              href="/"
+              href="https://www.facebook.com/sazzathossain.tuhin"
               target="_blank"
               className="underline underline-offset-2 hover:no-underline"
             >
               Facebook
             </Link>
+
             <Link
-              href="/"
+              href="https://x.com/sazzat_tuhin"
               target="_blank"
               className="underline underline-offset-2 hover:no-underline"
             >
