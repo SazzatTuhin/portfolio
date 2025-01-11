@@ -12,10 +12,14 @@ import {
 import { BsGit } from "react-icons/bs";
 import { GrNode } from "react-icons/gr";
 import {
+  SiDocker,
   SiExpress,
   SiFramer,
+  SiGithubactions,
   SiGreensock,
   SiMongoose,
+  SiMysql,
+  SiNginx,
   SiPrisma,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
@@ -70,12 +74,16 @@ export const skills = [
     icon: SiExpress,
   },
   {
-    name: "MongoDB",
-    icon: BiLogoMongodb,
-  },
-  {
     name: "PostgreSQL",
     icon: BiLogoPostgresql,
+  },
+  {
+    name: "MySQL",
+    icon: SiMysql,
+  },
+  {
+    name: "MongoDB",
+    icon: BiLogoMongodb,
   },
   {
     name: "Prisma",
@@ -88,5 +96,17 @@ export const skills = [
   {
     name: "Git",
     icon: BsGit,
+  },
+  {
+    name: "GitHub Actions",
+    icon: SiGithubactions,
+  },
+  {
+    name: "Nginx",
+    icon: SiNginx,
+  },
+  {
+    name: "Docker",
+    icon: SiDocker,
   },
 ];
