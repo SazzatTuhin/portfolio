@@ -52,7 +52,7 @@ const Blogs = () => {
       </div>
       <div className="flex justify-center mt-10">
         <Link
-          href="https://www.linkedin.com/in/m-m-sazzat-hossain-7ba102142/recent-activity/all/"
+          href="https://www.linkedin.com/in/m-m-sazzat-hossain-7ba102142/recent-activity/articles/"
           target="_blank"
           className="btn btn-outline"
         >
